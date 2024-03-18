@@ -14,8 +14,12 @@ class CAPatchEmbedding(nn.Module):
         super().__init__()
         conv_kernel  = to_2tuple(patch_size)
         pool_kernel  = to_2tuple(patch_size+(patch_size//2))
-        conv_padding = to_2tuple(patch_size//2)
         pool_padding = to_2tuple(patch_size//2)
+
+        if patch_size > 3:
+            conv_padding = to_2tuple(patch_size//2-1)
+        else:
+            conv_padding = to_2tuple(patch_size//2)        
 
         self.conv_proj = nn.Conv2d(in_chans, embed_dim, kernel_size=conv_kernel, stride=stride, 
                               padding=conv_padding)
@@ -25,6 +29,8 @@ class CAPatchEmbedding(nn.Module):
             self.pw_proj = nn.Conv2d(in_chans, embed_dim, kernel_size=1)
             self.act = act_layer ()
             self.cape = True
+        else:
+            self.cape = False
 
         self.norm = nn.LayerNorm(embed_dim)
 
