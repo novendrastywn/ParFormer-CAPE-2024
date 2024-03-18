@@ -1,4 +1,4 @@
-# Applying PVT to Object Detection
+# Applying ParFormer to Object Detection
 
 Our detection code is developed on top of [MMDetection v2.13.0](https://github.com/open-mmlab/mmdetection/tree/v2.13.0).
 
