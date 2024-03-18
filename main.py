@@ -30,7 +30,6 @@ from fvcore.nn import FlopCountAnalysis
 
 from utils import NativeScalerWithGradNormCount as NativeScaler
 import utils
-import models.convmext
 import models.parformer
 
 
@@ -49,7 +48,7 @@ def str2bool(v):
         raise argparse.ArgumentTypeError('Boolean value expected.')
 
 def get_args_parser():
-    parser = argparse.ArgumentParser('ConvNeXt training and evaluation script for image classification', add_help=False)
+    parser = argparse.ArgumentParser('ParFormer training and evaluation script for image classification', add_help=False)
     parser.add_argument('--batch_size', default=64, type=int,
                         help='Per GPU batch size')
     parser.add_argument('--epochs', default=300, type=int)
