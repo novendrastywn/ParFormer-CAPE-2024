@@ -31,3 +31,15 @@ Download and extract ImageNet train and val images from http://image-net.org/. T
 |-- /path/to/imagenet/
     |-- train
     |-- val
+
+### Single machine multi-GPU training
+
+We provide an example training script `train_imnet.sh` using PyTorch distributed data parallel (DDP). 
+
+To train ParFormer-B1 on an 2-GPU machine:
+
+```
+sh train_imnet.sh parformer_b1 2
+```
+
+Tips: specify your data path and experiment name in the script! 
