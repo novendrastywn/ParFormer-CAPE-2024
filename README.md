@@ -1,7 +1,8 @@
 
 # ParFormer: Vision Transformer Baseline with Parallel Local Global Token Mixer and Convolution Attention Patch Embedding
-The Implementation of ParFormer: Vision Transformer Baseline with Parallel Local Global Token Mixer and Convolution Attention Patch Embedding: https://arxiv.org/pdf/2403.15004.pdf
+The Implementation of ParFormer: Vision Transformer Baseline with Parallel Local Global Token Mixer and Convolution Attention Patch Embedding 
 
+[arXiv](https://arxiv.org/abs/2403.15004)|[PDF](https://arxiv.org/pdf/2403.15004.pdf)
 
 <img width="1633" alt="ParFormerFramework" src="https://github.com/novendrastywn/ParFormer-CAPE-2024/assets/31612686/73ab3406-81c1-4370-b8be-f634a5ee4705">
 
@@ -31,6 +32,7 @@ Download and extract ImageNet train and val images from http://image-net.org/. T
 |-- /path/to/imagenet/
     |-- train
     |-- val
+```
 
 ### Single machine multi-GPU training
 
